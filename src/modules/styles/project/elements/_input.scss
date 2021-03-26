@@ -1,0 +1,34 @@
+.input {
+    $self: &;
+    display: block;
+    width: 100%;
+
+    border-width: 0.0625rem;
+    border-style: solid;
+    border-color: rgba(white, 0.52);
+    border-radius: 0.3125rem;
+    outline: none;
+    background: rgba(#34383c, 0.2);
+
+    transition: $transition--normal;
+
+    color: $text-light;
+    &:focus {
+        background: transparent;
+        border-color: rgba($primary, 0.49);
+    }
+    &-wrap {
+        &.has-error {
+            #{$self} {
+                border-color: $danger !important;
+                color: $danger;
+            }
+        }
+        &.has-success {
+            // #{$self} {
+            //     border-color: $success !important;
+            //     color: $success;
+            // }
+        }
+    }
+}

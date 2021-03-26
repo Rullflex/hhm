@@ -1,0 +1,5 @@
+$relative-link-to-modules: "../../assets/fonts";
+
+@include font-face("Roboto", "Roboto-Medium", "500", "normal", $relative-link-to-modules);
+
+@include font-face("Roboto", "Roboto-Bold", "700", "normal", $relative-link-to-modules);

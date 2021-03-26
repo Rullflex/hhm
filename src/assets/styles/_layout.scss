@@ -1,0 +1,247 @@
+.header {
+    background: $secondary;
+    &__row {
+        padding: 4rem 0;
+        @media (max-width: map-get($grid-breakpoints, lg)) {
+            padding: 2.3rem 0;
+        }
+        @media (max-width: map-get($grid-breakpoints, sm)) {
+            padding: 1.5rem 0;
+        }
+    }
+    &__logo {
+        &-img {
+            // width: 21.65rem;
+            width: 110%;
+        }
+    }
+}
+
+.s1 {
+    padding-top: 2rem;
+    padding-bottom: 7rem;
+    background: $secondary;
+    color: $text-light;
+    @media (max-width: map-get($grid-breakpoints, sm)) {
+        padding-top: 0;
+        padding-bottom: 5rem;
+    }
+    &__contact-icon {
+        // width: 19.2rem;
+        width: 100%;
+    }
+    .form {
+        margin-top: 2rem;
+        font-weight: 500;
+        &__label {
+            font-size: 2.5rem;
+            margin-bottom: 0.7rem;
+            @media (max-width: map-get($grid-breakpoints, sm)) {
+                font-size: 1.6rem;
+                margin-bottom: 0.4rem;
+            }
+        }
+        &__star {
+            color: $red;
+        }
+        &__input {
+            padding-left: 2rem;
+            height: 7rem;
+            font-size: 2rem;
+            &--first {
+                margin-bottom: 4.7rem;
+            }
+            @media (max-width: map-get($grid-breakpoints, lg)) {
+                margin-bottom: 3rem;
+            }
+            @media (max-width: map-get($grid-breakpoints, sm)) {
+                height: 4rem;
+                font-size: 1.4rem;
+                margin-bottom: 2rem;
+            }
+        }
+        &__textarea {
+            padding: 2rem;
+            height: 23rem;
+            resize: none;
+            font-size: 2rem;
+            @media (max-width: map-get($grid-breakpoints, sm)) {
+                height: 13rem;
+                font-size: 1.4rem;
+                padding-top: 1.3rem;
+            }
+        }
+        &__btn {
+            width: 18rem;
+            margin-left: auto;
+            margin-right: 0;
+            line-height: 5.7rem;
+            font-size: 2.6rem;
+            margin-top: 7.6rem;
+            @media (max-width: map-get($grid-breakpoints, lg)) {
+                margin-top: 4rem;
+            }
+            @media (max-width: map-get($grid-breakpoints, sm)) {
+                font-size: 1.8rem;
+                width: 100%;
+                line-height: 4.7rem;
+                color: white;
+            }
+        }
+    }
+}
+
+.s2 {
+    padding-top: 9.3rem;
+    padding-bottom: 5rem;
+    @media (max-width: map-get($grid-breakpoints, sm)) {
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+    }
+    &__title {
+        font-size: 3rem;
+        text-align: center;
+        font-weight: 500;
+        margin-bottom: 8.7rem;
+        @media (max-width: map-get($grid-breakpoints, sm)) {
+            font-size: 2.3rem;
+            margin-bottom: 4rem;
+        }
+    }
+    &__card {
+        margin: 0 auto 4.5rem;
+        width: 90%;
+        background: #e9eef3;
+        text-align: center;
+        
+        @media (max-width: map-get($grid-breakpoints, sm)) {
+            margin-bottom: 2.3rem;
+        }
+        &-head {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 5.9rem;
+            background: #4b596c;
+        }
+        &-name {
+            color: white;
+            font-size: 2.4rem;
+            margin-bottom: 0;
+            @media (max-width: map-get($grid-breakpoints, sm)) {
+                font-size: 1.8rem;
+            }
+        }
+        &-body {
+            height: 22.3rem;
+            padding: 2.7rem 1rem 0;
+            @media (max-width: map-get($grid-breakpoints, sm)) {
+                height: 13rem;
+                padding: 1.7rem 1rem 0;
+            }
+        }
+        &-email {
+            font-weight: bold;
+            font-size: 2.4rem;
+            margin-bottom: 2.8rem;
+            @media (max-width: map-get($grid-breakpoints, sm)) {
+                font-size: 1.8rem;
+                margin-bottom: 1.3rem;
+            }
+        }
+        &-text {
+            font-size: 2.1rem;
+            line-height: 1.1em;
+            @media (max-width: map-get($grid-breakpoints, sm)) {
+                font-size: 1.4rem;
+            }
+        }
+        &--even {
+            background: #deebde;
+            .s2__card {
+                &-head {
+                    background: #58ad52;
+                }
+            }
+        }
+    }
+}
+
+
+.footer {
+    background: $secondary;
+    &__row {
+        padding: 2.8rem 0;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width: map-get($grid-breakpoints, sm)) {
+            padding: 1.7rem 0;
+        }
+    }
+    &__logo {
+        &-img {
+            width: 90%;
+        }
+    }
+    &__icons {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__icon {
+        width: 3.7rem;
+        height: 3.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(#2f3338, 0.5);
+        border: 0.25rem solid #454648;
+        border-radius: 50%;
+        color: white;
+        transition: $transition--hover;
+        @media (max-width: map-get($grid-breakpoints, md)) {
+            width: 3rem;
+            height: 3rem;
+        }
+        @media (max-width: map-get($grid-breakpoints, sm)) {
+            width: 2rem;
+            height: 2rem;
+            border: 0.125rem solid #454648;
+        }
+        &--first {
+            svg {
+                width: 1.6rem;
+                height: auto;
+                @media (max-width: map-get($grid-breakpoints, md)) {
+                    width: 1.3rem;
+                }
+                @media (max-width: map-get($grid-breakpoints, sm)) {
+                    width: 1rem;
+                }
+            }
+        }
+        &--last {
+            margin-left: 3.3rem;
+            @media (max-width: map-get($grid-breakpoints, md)) {
+                margin-left: 2.7rem;
+            }
+            @media (max-width: map-get($grid-breakpoints, sm)) {
+                margin-left: 1.7rem;
+            }
+            svg {
+                width: 0.9rem;
+                height: auto;
+                @media (max-width: map-get($grid-breakpoints, md)) {
+                    width: 0.7rem;
+                }
+                @media (max-width: map-get($grid-breakpoints, sm)) {
+                    width: 0.5rem;
+                }
+            }
+        }
+        &:hover {
+            color: #454648;
+            background: white;
+        }
+    }
+}

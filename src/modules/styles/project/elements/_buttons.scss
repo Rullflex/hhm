@@ -1,0 +1,67 @@
+.btn {
+    margin: 0;
+    border: none;
+    overflow: visible;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: $transition--hover;
+
+    &:hover {
+        text-decoration: none;
+    }
+    &:not(:disabled) {
+        cursor: pointer;
+    }
+
+}
+
+.btn {
+    &-solid {
+        @mixin btn-solid($btn-color, $font-color) {
+            background: $btn-color;
+            color: $font-color;
+            border-radius: 0.1875rem;
+            &:active {
+                background: link-hover($btn-color);
+                color: $font-color;
+            }
+            @media (min-width: map-get($grid-breakpoints, lg)) {
+                &:hover {
+                    background: link-hover($btn-color);
+                    color: $font-color;
+                }
+            }
+        }
+        &-primary {
+            @include btn-solid($primary, #ffffff);
+        }
+    }
+    &-outline {
+        @mixin btn-outline($btn-color) {
+            border: 0.0625rem solid $btn-color;
+            background: transparent;
+            color: $btn-color;
+            &:active {
+                background: $btn-color;
+                color: $text-light;
+            }
+            @media (min-width: map-get($grid-breakpoints, lg)) {
+                &:hover {
+                    background: $btn-color;
+                    color: $text-light;
+                }
+            }
+        }
+    }
+}

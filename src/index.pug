@@ -1,0 +1,61 @@
+extends modules/layout/_layout
+
+prepend head
+	title Honey Hunters Test App
+	meta(name="description", content="Honey Hunters Test App")
+
+block header 
+	header.header
+		.container 
+			.row.header__row
+				.col-5.col-lg-3
+					a(href="/").header__logo
+						+picture(png, `${assets}logo`, 'n').header__logo-img
+
+block content
+	main.main
+		section.s1 
+			.container 
+				.row.justify-content-center
+					.col-5.col-lg-3
+						+picture(png, `${assets}contact-icon`, 'n').s1__contact-icon
+				form.form
+					.row.justify-content-between
+						.col-12.col-lg-5
+							.input-wrap 
+								label(for="input-name").form__label Имя #[span.form__star *]
+								input.form__input.form__input--first.input(id="input-name" type="text" name="Имя")
+							.input-wrap 
+								label(for="input-email").form__label E-mail #[span.form__star *]
+								input.form__input.input(id="input-email" type="email" name="email")
+						.col-12.col-lg-6
+							.input-wrap 
+								label(for="input-comment").form__label Комментарий #[span.form__star *]
+								textarea.form__textarea.input(id="input-comment" name="comment")
+					.row.justify-content-end
+						.col
+							button.btn.btn-solid-primary.form__btn(type="submit") Записать
+		section.s2 
+			.container 
+				.row 
+					.col 
+						h2.s2__title Выводим комментарии
+				.row#cards-load 
+					
+
+block footer
+	footer.footer
+		.container 
+			.row.footer__row
+				.col-5.col-lg-3
+					a(href="/").footer__logo
+						+picture(png, `${assets}logo`, 'n').footer__logo-img
+				.col
+					.footer__icons 
+						a.footer__icon.footer__icon--first(href=vkLink target="_blank")
+							svg(width="17" height="10" viewBox="0 0 17 10" fill="currentColor" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none")
+								path(fill-rule="evenodd" clip-rule="evenodd" d="M16.6086 0.671053C16.7282 0.276321 16.6086 0 16.0505 0H14.1903C13.712 0 13.4995 0.250001 13.3798 0.526322C13.3798 0.526322 12.4365 2.81575 11.0945 4.28947C10.656 4.72371 10.4701 4.85524 10.2309 4.85524C10.1113 4.85524 9.93854 4.72371 9.93854 4.32896V0.671053C9.93854 0.197372 9.80572 0 9.40714 0H6.48399C6.19168 0 6.00566 0.223693 6.00566 0.421051C6.00566 0.868425 6.67 0.973681 6.74973 2.21052V4.92101C6.74973 5.5132 6.64344 5.61845 6.40427 5.61845C5.77979 5.61845 4.23851 3.32896 3.335 0.697374C3.14899 0.210526 2.97626 0 2.49793 0H0.637778C0.106308 0 0 0.250001 0 0.526322C0 1.01316 0.624482 3.43421 2.9364 6.63153C4.47767 8.81577 6.64344 10 8.60983 10C9.79241 10 9.93854 9.73679 9.93854 9.28949V7.63153C9.93854 7.10525 10.0449 6.99999 10.4301 6.99999C10.7092 6.99999 11.1742 7.13153 12.2771 8.18423C13.5393 9.43423 13.7519 10 14.4561 10H16.3163C16.8477 10 17.1135 9.73679 16.9541 9.22372C16.7813 8.71051 16.1834 7.96051 15.3862 7.06576C14.9477 6.55255 14.2966 6.0132 14.1106 5.73678C13.8316 5.38152 13.9114 5.22371 14.1106 4.92101C14.1106 4.90794 16.3827 1.75 16.6086 0.671053Z" fill="currentColor")
+						a.footer__icon.footer__icon--last(href=fbLink target="_blank")
+							svg(width="10" height="18" viewBox="0 0 10 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none")
+								path(d="M6.10094 17.0444V9.65814H8.59005L8.96279 6.77948H6.10094V4.94167C6.10094 4.10834 6.33319 3.54023 7.53306 3.54023L9.0635 3.5397V0.964909C8.79883 0.92997 7.89038 0.85162 6.83356 0.85162C4.6271 0.85162 3.11659 2.19306 3.11659 4.65677V6.77948H0.621094V9.65814H3.11659V17.0444H6.10094Z" fill="currentColor")
+					
